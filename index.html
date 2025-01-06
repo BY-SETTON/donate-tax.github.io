@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate to Charity and Claim Tax Benefits</title>
     <style>
-        /* Reset some default styles */
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body styling */
+        /* Body Styling */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
             color: #333;
+            line-height: 1.6;
             padding: 20px;
         }
 
@@ -27,127 +27,146 @@
             margin: auto;
             background: #fff;
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Header */
+        /* Header Styling */
         header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         header h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             color: #2c3e50;
             margin-bottom: 10px;
         }
 
-        /* Paragraph */
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1em;
+        header p {
+            font-size: 1.2em;
+            color: #555;
         }
 
-        /* Steps Section */
-        h2 {
-            color: #2980b9;
-            margin-bottom: 10px;
-        }
-
-        ol {
-            padding-left: 20px;
+        /* Steps Styling */
+        .steps {
+            list-style: none;
+            padding-left: 0;
             margin-bottom: 20px;
         }
 
-        ol li {
+        .steps li {
+            background: #e9f5fe;
+            border: 2px solid #3498db;
+            border-radius: 10px;
             margin-bottom: 15px;
-            position: relative;
-            padding-left: 25px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        ol li::before {
-            content: "✔️";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #27ae60;
+        .steps li .step-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #3498db;
+            background: #d6ebfa;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* Links */
-        a {
-            color: #2980b9;
+        .title {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .steps li .step-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .steps li p {
+            margin: 0;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .steps li a {
+            color: #3498db;
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-weight: bold;
         }
 
-        a:hover {
-            color: #1abc9c;
+        .steps li a:hover {
             text-decoration: underline;
         }
 
-        /* Call-to-Action Button */
-        .cta {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #27ae60;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta:hover {
-            background-color: #1e8449;
-        }
-
-        /* Footer */
-        footer {
+        /* Footer Link */
+        .back-link {
+            display: block;
             text-align: center;
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #777;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-
-            header h1 {
-                font-size: 1.5em;
-            }
-
-            p, ol li {
-                font-size: 1em;
-            }
+        .back-link:hover {
+            color: #1abc9c;
         }
     </style>
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>Donate to Charity and Claim Tax Benefits</h1>
+        <h1>Donate and Claim Tax Benefits</h1>
+        <p>You can choose where your tax goes</p>
+        <p>Follow these simple steps to make a difference you believe in.</p>
     </header>
-    <p>Support meaningful causes and enjoy tax deductions by donating to registered charities. Follow the steps below to make a difference and benefit from SARS tax deductions.</p>
 
-    <h2>Steps to Claim Your Tax Deduction</h2>
-    <ol>
-        <li>Choose a registered NGO. You can view the list of qualified NGOs <a href="qualified-ngos.html">here</a>.</li>
-        <li>Make your donation and ensure you receive a <b>Section 18A tax certificate</b> from the NGO.</li>
-        <li>Log into your <a href="https://secure.sarsefiling.co.za/landing" target="_blank">SARS eFiling account</a> and navigate to the "Tax Returns" section.</li>
-        <li>Submit your Section 18A certificate under the "Deductions" section for charitable donations.</li>
-        <li>Keep your certificate for your records in case SARS requests verification.</li>
+    <ol class="steps">
+        <li>
+            <div class="title">
+            <div class="step-number">1</div>
+            <div class="step-title">Choose a Charity</div>
+            </div>
+            <p>Choose a registered charity eligible for tax deductions. <a href="qualified-ngos.html">View the list of qualified NGOs</a>.</p>
+        </li>
+        <li>
+            <div class="title">
+            <div class="step-number">2</div>
+            <div class="step-title">Make Your Donation</div>
+            </div>
+            <p>Make a donation to the charity and request a <b>Section 18A tax certificate</b>. This certificate is required to claim your tax benefits.</p>
+        </li>
+        <li>
+            <div class="title">
+            <div class="step-number">3</div>
+            <div class="step-title">Log In to SARS eFiling</div>
+            </div>
+            <p>Log in to <a href="https://www.sarsefiling.co.za" target="_blank">SARS eFiling</a> and navigate to the "Tax Returns" section to submit your ITR12 return.</p>
+        </li>
+        <li>
+            <div class="title">
+            <div class="step-number">4</div>
+            <div class="step-title">Attach the Certificate</div>
+            </div>
+            <p>Attach the Section 18A tax certificate to your tax return as proof of your donation.</p>
+        </li>
+        <li>
+            <div class="title">
+            <div class="step-number">5</div>
+            <div class="step-title">Submit Your Return</div>
+            </div>
+            <p>Submit your return and monitor your SARS account for updates on your tax claim.</p>
+        </li>
     </ol>
-
-    <p>It's that simple! Start donating and make a positive impact today.</p>
-
-    <a href="qualified-ngos.html" class="cta">View Qualified NGOs</a>
 </div>
-
-<footer>
-    Choose where your tax goes.
-</footer>
 </body>
 </html>
